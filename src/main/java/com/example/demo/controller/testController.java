@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class testController extends AbstractController {
 
     @PostMapping("/")
-    public @ResponseBody ResponseDto<String> get() {
-        throw new BaseException(ResultType.ERROR, "시발에러떳다");
+    public @ResponseBody ResponseDto<Void> get() {
+        /*throw new BaseException(ResultType.ERROR, "시발에러떳다");*/
+        return ok();
     }
 
     @GetMapping

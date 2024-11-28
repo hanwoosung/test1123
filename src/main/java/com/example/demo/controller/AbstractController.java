@@ -14,9 +14,9 @@ public abstract class AbstractController {
     }
 
     public <T> ResponseDto<T> ok(T data, ResultObject result) {
-        ResponseDto<T> obj = new ResponseDto<>();
-        obj.setResult(result);
-        obj.setData(data);
-        return obj;
+        ResponseDto<T> response = new ResponseDto<>();
+        response.setResult(result);
+        response.setData(data);
+        return response;
     }
 }
