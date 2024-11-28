@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="test()">테스트</button>
+<h1>404</h1>
+
+<h1 th:text="${errorCode}"></h1>
+<h1 th:text="${errorMessage}"></h1>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    function test() {
+        axios.post("/").then(res => {
+            console.log(res)
+        }).catch(res => {
+            console.log(res)
+        })
+    }
+</script>
+</html>
